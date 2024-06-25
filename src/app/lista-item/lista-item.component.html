@@ -1,0 +1,38 @@
+<table class="table table-success table-striped-columns text-center align-middle">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of items; track $index) {
+            <tr >
+                <td ><img [src]="item.imagen" alt=""></td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.tipo}}</td>
+                @if (item.stock>0) {
+                <td [ngClass]="{'oferta':item.oferta}">{{item.precio}}</td>
+                <td class="compra">
+                    <span>
+                        <button>+</button>
+                        <input type="text">
+                        <button>-</button>
+                    </span>
+                    <div>
+                        <button class="m-2">comprar</button>
+                    </div>
+                    
+                </td>
+                        }@else {
+                            <td colspan="2">
+                                <span class="badge text-bg-warning">Sin stock</span>
+                            </td>
+                        }
+            </tr>
+        }
+    </tbody>
+  </table>
