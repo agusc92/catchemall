@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Item } from './Item';
+import { CompraItemService } from '../compra-item.service';
 
 @Component({
   selector: 'lista-item',
@@ -43,6 +44,10 @@ export class ListaItemComponent {
     },
     
   ]
+  private compra : CompraItemService;
+  constructor(compra : CompraItemService){
+    this.compra = compra;
+  }
   agregar(item :Item) : void{
     if(item.cantidad < item.stock)
     item.cantidad ++;
@@ -63,5 +68,9 @@ export class ListaItemComponent {
       item.cantidad = item.stock
     alert(`Este item posee una cantidad maxima de: ${item.stock} unidades`)
     }
+  }
+
+  comprar(item : Item) : void{
+     this.compra.comprar(item );
   }
 }
