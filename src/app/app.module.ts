@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { ListaItemComponent } from './lista-item/lista-item.component';
 import { MochilaComponent } from './mochila/mochila.component';
 import { FormsModule } from '@angular/forms';
+import { TiendaComponent } from './tienda/tienda.component';
+import { AcercaComponent } from './acerca/acerca.component';
+import { IndicadorCantidadComponent } from './indicador-cantidad/indicador-cantidad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaItemComponent,
-    MochilaComponent
+    MochilaComponent,
+    TiendaComponent,
+    AcercaComponent,
+    IndicadorCantidadComponent
   ],
   imports: [
     BrowserModule,
