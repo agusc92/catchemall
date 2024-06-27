@@ -1,24 +1,13 @@
 <header>
   <nav class="navbar bg-body-tertiary">
     <form class="container-fluid justify-content-start">
-      <button class="btn btn-outline-success me-2" type="button">Main button</button>
-      <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+      <button class="btn btn-outline-success me-2" [routerLink]="['/']" type="button">Tienda</button>
+      <button class="btn btn-sm btn-outline-secondary" [routerLink]="['/acerca']" type="button">acerca</button>
     </form>
   </nav>
 </header>
 <main>
-<div class="container-xxl">
-  <div class="row">
-    <div class="col-8 poke-tienda">
-      <lista-item></lista-item>
-    </div>
-    <div class="col-4 poke-mochila">
-      <mochila-items></mochila-items>
-    </div>
-
-  </div>
-  
-</div>
+<router-outlet></router-outlet>
 </main>
 <footer>
   <div class="container">

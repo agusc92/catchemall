@@ -43,25 +43,5 @@ export class ListaItemComponent {
     },
     
   ]
-  agregar(item :Item) : void{
-    if(item.cantidad < item.stock)
-    item.cantidad ++;
-  }
-
-  quitar(item :Item) : void{
-    if(item.cantidad > 0)
-    item.cantidad --;
-  }
-
-  verificarValor(event : KeyboardEvent,item : Item) : void{
-    if(!parseInt(event.key)&&event.key !='Backspace'){ 
-      event.preventDefault();
-    }
-  }
-  acomodarValor(item : Item) : void{
-    if(item.cantidad>item.stock){
-      item.cantidad = item.stock
-    alert(`Este item posee una cantidad maxima de: ${item.stock} unidades`)
-    }
-  }
+  
 }

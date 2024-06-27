@@ -1,0 +1,11 @@
+
+<span class="d-flex justify-content-center">
+    
+    <button class="btn btn-light btn-sm" (click)="quitar()">-</button>
+    <input type="text" class="form-control"
+    (keypress)="verificarValor($event)"
+    (change)="acomodarValor()"
+    [(ngModel)]="cantidad">
+    
+    <button class="btn btn-light btn-sm" (click)="agregar()">+</button>
+</span>

@@ -17,15 +17,7 @@
                 @if (item.stock>0) {
                 <td [ngClass]="{'oferta':item.oferta}">{{item.precio}}</td>
                 <td class="compra">
-                    <span class="d-flex justify-content-center">
-                        <button class="btn btn-light btn-sm" (click)="quitar(item)">-</button>
-                        <input type="text" class="form-control"
-                        (keypress)="verificarValor($event,item)"
-                        (change)="acomodarValor(item)"
-                        [(ngModel)]="item.cantidad">
-                        
-                        <button class="btn btn-light btn-sm" (click)="agregar(item)">+</button>
-                    </span>
+                   <indicador-cantidad [(cantidad)]="item.cantidad" [max]="item.stock"></indicador-cantidad>
                     <div>
                         <button class="m-2">comprar</button>
                     </div>
