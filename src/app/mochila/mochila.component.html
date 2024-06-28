@@ -1,1 +1,9 @@
 <p>mochila works!</p>
+<ul>
+    @for (item of mochila; track $index) {
+        <li class="ancho">
+            {{item.nombre}} : {{item.cantidad}}
+            <indicador-cantidad [cantidad]="item.cantidad" [max]="item.stock"></indicador-cantidad>
+        </li>
+    }
+</ul>

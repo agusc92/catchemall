@@ -35,13 +35,9 @@ export class IndicadorCantidadComponent {
     if(this.cantidad>this.max){
       this.cantidad = this.max
     alert(`Este item posee una cantidad maxima de: ${this.max} unidades`)
-    this.cantidadChange.emit(this.cantidad);
-    }
+  }
+  this.cantidadChange.emit(this.cantidad);
   }
 
-  private compra : CompraItemService;
-
-  constructor(compra : CompraItemService){
-    this.compra = compra;
-  }
+  
 }

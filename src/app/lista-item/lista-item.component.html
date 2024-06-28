@@ -19,7 +19,7 @@
                 <td class="compra">
                    <indicador-cantidad [(cantidad)]="item.cantidad" [max]="item.stock"></indicador-cantidad>
                     <div>
-                        <button class="m-2">comprar</button>
+                        <button class="m-2 btn" (click)="comerciar(item)">comprar</button>
                     </div>
                     
                 </td>

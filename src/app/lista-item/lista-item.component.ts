@@ -44,5 +44,17 @@ export class ListaItemComponent {
     },
     
   ]
-  
+  private compra : CompraItemService;
+
+  constructor(compra : CompraItemService){
+    this.compra = compra;
+  }
+
+  comerciar(item : Item){
+    if(item.cantidad){
+      this.compra.comprar(item);
+      item.stock -= item.cantidad;
+      item.cantidad = 0;
+    }
+  }
 }
