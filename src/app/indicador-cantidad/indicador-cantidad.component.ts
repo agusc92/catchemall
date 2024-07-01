@@ -27,9 +27,11 @@ export class IndicadorCantidadComponent {
   }
 
   verificarValor(event : KeyboardEvent) : void{
-    if(!parseInt(event.key)&&event.key !='Backspace'){ 
+    let vetadas : string[] =['ArrowUp','ArrowDown','e']
+    if(!parseInt(event.key)&& vetadas.find(v=> v==event.key) ){ 
       event.preventDefault();
     }
+    
   }
   acomodarValor() : void{
     if(this.cantidad>this.max){
@@ -38,6 +40,6 @@ export class IndicadorCantidadComponent {
   }
   this.cantidadChange.emit(this.cantidad);
   }
-
+  
   
 }
