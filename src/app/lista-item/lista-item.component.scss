@@ -1,8 +1,46 @@
 
 .oferta{
-    color: green;
-    font-weight: 700;
-    font-size: large;
-    text-decoration: underline;
+    background-color: #a4ec60;
+    
+   
+    
+}
+tr{
+    background-color: #F9F4CE;     
+    padding-top:20px ;
 }
 
+.principio{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-left: solid #FFCF9B 10px;
+}
+.fin{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-right: solid #FFCF9B 10px;
+    
+}
+table{
+    width: 100%;
+    background-color: #FFCF9B;
+    margin: 0;
+}
+tbody{
+    font-weight: 700;
+    font-size: large;
+}
+
+td{
+    border-top: solid #FFCF9B 10px;
+     padding: 10px 0 10px 0;
+}
+th{
+    
+}
+.cabecera{
+    background-color: #0175BD;
+    color: white;
+    height: 30px;
+    border:0;
+}

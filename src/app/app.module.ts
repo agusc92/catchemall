@@ -27,4 +27,6 @@ import { IndicadorCantidadComponent } from './indicador-cantidad/indicador-canti
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

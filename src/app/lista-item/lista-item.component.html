@@ -1,6 +1,6 @@
-<table class="table table-success table-striped-columns text-center align-middle">
-    <thead>
-        <tr>
+<table class=" text-center align-middle">
+    <thead >
+        <tr class="cabecera">
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
@@ -8,15 +8,15 @@
             <th>compra</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody >
         @for (item of items; track $index) {
-            <tr >
-                <td ><img [src]="item.imagen" alt=""></td>
+            <tr [ngClass]="{'oferta':item.oferta}"class="mercancia ">
+                <td class="principio"><img [src]="item.imagen" alt=""></td>
                 <td>{{item.nombre}}</td>
                 <td>{{item.tipo}}</td>
                 @if (item.stock>0) {
-                <td [ngClass]="{'oferta':item.oferta}">{{item.precio}}</td>
-                <td class="compra">
+                <td >{{item.precio}}</td>
+                <td class="compra fin">
                    <indicador-cantidad [(cantidad)]="item.cantidad" [max]="item.stock"></indicador-cantidad>
                     <div>
                         <button class="m-2 btn" (click)="comerciar(item)">comprar</button>
