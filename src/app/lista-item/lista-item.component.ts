@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Item } from './Item';
 import { CompraItemService } from '../compra-item.service';
+import { ItemDataService } from '../item-data.service';
 
 @Component({
   selector: 'lista-item',
@@ -9,47 +10,18 @@ import { CompraItemService } from '../compra-item.service';
 })
 export class ListaItemComponent {
 
-  items : Item[]=[
-    {nombre : 'pokebola',
-      tipo : 'captura',
-      precio : 100,
-      stock : 5,
-      imagen : 'assets/media/pokeball.webp',
-      oferta : false,
-      cantidad : 0,
-    },
-    {nombre : 'revive',
-      tipo : 'revive',
-      precio : 100,
-      stock : 3,
-      imagen : 'assets/media/revive.webp',
-      oferta : true,
-      cantidad : 0,
-    },
-    {nombre : 'pocion',
-      tipo : 'curacion',
-      precio : 100,
-      stock : 1,
-      imagen : 'assets/media/pocion.webp',
-      oferta : true,
-      cantidad : 0,
-    },
-    {nombre : 'superbola',
-      tipo : 'captura',
-      precio : 100,
-      stock : 2,
-      imagen : 'assets/media/superball.webp',
-      oferta : false,
-      cantidad : 0,
-    },
-    
-  ]
+  items : Item[]=[];
   private compra : CompraItemService;
 
-  constructor(compra : CompraItemService){
+  constructor(compra : CompraItemService,
+    private itemDataService : ItemDataService
+  ){
     this.compra = compra;
   }
-
+  ngOnInit(){
+    this.itemDataService.getAll()
+    .subscribe(items=>this.items = items);
+  }
   comerciar(item : Item){
     if(item.cantidad){
       this.compra.comprar(item);

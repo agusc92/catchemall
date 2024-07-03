@@ -28,7 +28,7 @@ ngOnDestroy(): void {
 quitar(item : Item) : void{
   if(item.cantidad > 0)
   item.cantidad --;
-  item.stock =item.stock+1;
-// this.cantidadChange.emit(this.cantidad);
+  
+
 }
 }

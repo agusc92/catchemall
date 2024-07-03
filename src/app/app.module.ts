@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { TiendaComponent } from './tienda/tienda.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { IndicadorCantidadComponent } from './indicador-cantidad/indicador-cantidad.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { IndicadorCantidadComponent } from './indicador-cantidad/indicador-canti
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

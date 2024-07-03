@@ -1,3 +1,5 @@
+
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -7,4 +9,16 @@ nav{
 button{
     color: white;
     border-color: white;
+}
+.footer{
+    background-color:  #358BD8;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
