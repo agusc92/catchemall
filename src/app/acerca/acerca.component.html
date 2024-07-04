@@ -1,2 +1,25 @@
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, porro? Saepe, voluptatibus ipsam! Corporis recusandae, ex aliquid itaque, non minima voluptas omnis in nemo atque enim, reiciendis illum numquam animi!</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe fugit ex eius architecto ad ipsam aut placeat, veniam explicabo autem. Minus odio quos tempora itaque commodi expedita quod architecto aliquid!</p>
+<div class="contenedor">
+    <img src="assets\media\Profesor_Oak.webp" alt="" height="500px">
+
+    
+    <div class="globo iv izquierda-arriba yellow">
+      <h2>Bienvenidos aventureros</h2>
+      <p>
+        En esta tienda encontraras lo necesario para convertirte e un maestro pokemon y salir de aventuras
+      </p>
+      <h2 class="oferta-titulo">Ofertas</h2>
+      <p>Estos articulos se encuentran de oferta actualmente. aprovechalo!</p>
+      <div class="ofertas" >
+        @for (item of items$ | async; track $index  ) {
+            <div>
+                <img [src]="item.imagen" width="100px" height="100px">
+                <p>{{item.nombre}}</p>
+            </div>
+            
+        }
+      </div>
+      
+    </div> 
+    
+  
+</div>
